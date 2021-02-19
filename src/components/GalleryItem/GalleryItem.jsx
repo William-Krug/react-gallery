@@ -37,7 +37,7 @@ function GalleryItem({ galleryItem, loveIt }) {
       </div>
       <div className="love=counter">
         <p>
-          <strong>??</strong> people love this!
+          <strong>{galleryItem.likes}</strong> people love this!
         </p>
       </div>
     </div>

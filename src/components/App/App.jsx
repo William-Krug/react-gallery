@@ -39,6 +39,17 @@ function App() {
   const loveIt = (loveItID) => {
     console.log('*** in loveIt ***');
     console.log('loveItID:', loveItID);
+
+    axios
+      .put(`/gallery/like/${loveItID}`)
+      .then((response) => {
+        console.log('PUT response:', response);
+        fetchGalleryList();
+      })
+      .catch((error) => {
+        alert('ERROR with request.  Please try again later.');
+        console.log(`PUT '/gallery/like/${loveItID}' error:`, error);
+      });
   };
 
   return (
