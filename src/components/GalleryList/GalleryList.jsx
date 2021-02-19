@@ -1,154 +1,24 @@
-import './GalleryList.css';
+// import './GalleryList.css';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList() {
+/**
+ * Function creates a container to place individual items in to be used by the App component
+ *
+ * Returns jsx to be displayed by the App.jsx component
+ *
+ * Incoming props looks like:
+ * [{id: title: description: path: likes:}, {}, {}...]
+ *
+ * @param {galleryList} param0
+ */
+function GalleryList({ galleryList }) {
+  console.log('*** in GalleryList() Component ***');
+  console.log('galleryList:', galleryList);
   return (
     <div>
-      <h2>Through the Years</h2>
-      <div className="gallery-display">
-        <div className="gallery-item">
-          <div>
-            <img
-              src="../../public/images/emma.jpg"
-              alt="Photo of two knights fighting with hand-and-a-half broadswords."
-              width="100"
-              height="100"
-            />
-          </div>
-          <div>
-            <button
-              className="loveIt-button"
-              onClick={() => console.log('Like Button Clicked')}
-            >
-              Love It!
-            </button>
-          </div>
-          <div className="love-counter">
-            <p>
-              <strong>??</strong> people love this!
-            </p>
-          </div>
-        </div>
-
-        <div className="gallery-item">
-          <div>
-            <img
-              src="../../public/images/skydiving.jpg"
-              alt="Photo of tandem skydivers at 7,000 feet."
-              width="100"
-              height="100"
-            />
-          </div>
-          <div>
-            <button
-              className="loveIt-button"
-              onClick={() => console.log('Like Button Clicked')}
-            >
-              Love It!
-            </button>
-          </div>
-          <div className="love-counter">
-            <p>
-              <strong>??</strong> people love this!
-            </p>
-          </div>
-        </div>
-
-        <div className="gallery-item">
-          <div>
-            <img
-              src="../../public/images/digital.jpg"
-              alt="Photo of a color burst digitally rendered."
-              width="100"
-              height="100"
-            />
-          </div>
-          <div>
-            <button
-              className="loveIt-button"
-              onClick={() => console.log('Like Button Clicked')}
-            >
-              Love It!
-            </button>
-          </div>
-          <div className="love-counter">
-            <p>
-              <strong>??</strong> people love this!
-            </p>
-          </div>
-        </div>
-
-        <div className="gallery-item">
-          <div>
-            <img
-              src="../../public/images/amber.jpg"
-              alt="Photo of a stunning wife on our wedding day."
-              width="100"
-              height="100"
-            />
-          </div>
-          <div>
-            <button
-              className="loveIt-button"
-              onClick={() => console.log('Like Button Clicked')}
-            >
-              Love It!
-            </button>
-          </div>
-          <div className="love-counter">
-            <p>
-              <strong>??</strong> people love this!
-            </p>
-          </div>
-        </div>
-
-        <div className="gallery-item">
-          <div>
-            <img
-              src="../../public/images/munchkins.jpg"
-              alt="Photo of a new big sister loving her little brother."
-              width="100"
-              height="100"
-            />
-          </div>
-          <div>
-            <button
-              className="loveIt-button"
-              onClick={() => console.log('Like Button Clicked')}
-            >
-              Love It!
-            </button>
-          </div>
-          <div className="love-counter">
-            <p>
-              <strong>??</strong> people love this!
-            </p>
-          </div>
-        </div>
-
-        <div className="gallery-item">
-          <div>
-            <img
-              src="../../public/images/emma.jpg"
-              alt="Photo of two knights fighting with hand-and-a-half broadswords."
-              width="100"
-              height="100"
-            />
-          </div>
-          <div>
-            <button
-              className="loveIt-button"
-              onClick={() => console.log('Like Button Clicked')}
-            >
-              Love It!
-            </button>
-          </div>
-          <div className="love-counter">
-            <p>
-              <strong>??</strong> people love this!
-            </p>
-          </div>
-        </div>
-      </div>
+      {galleryList.map((galleryItem) => {
+        return <GalleryItem key={galleryItem.id} galleryItem={galleryItem} />;
+      })}
     </div>
   );
 }

@@ -11,14 +11,14 @@
   - [x] `title`
   - [x] `description`
   - [x] `path`
-- [ ] `GalleryList.jsx` static markup
-  - [ ] css for `GalleryList`
-  - [ ] `<div>` container
-  - [ ] `<img>` placement
-  - [ ] `<button>`
-  - [ ] `<p>`
-- [ ] `GalleryItem.jsx`
-  - [ ] css for `GalleryItem`
+- [x] `GalleryList.jsx` static markup
+  - [x] css for `GalleryList`
+  - [x] `<div>` container
+  - [x] `<img>` placement
+  - [x] `<button>`
+  - [x] `<p>`
+- [x] `GalleryItem.jsx`
+  - [x] css for `GalleryItem`
 - [ ] verify button recognized by `App.jsx`
   - [ ] axios `PUT` to `/gallery/like/:id`
 - [ ] connect button to server for voting
