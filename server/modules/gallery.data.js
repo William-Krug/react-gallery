@@ -16,7 +16,7 @@ const galleryItems = [
   },
   {
     id: 3,
-    path: `images/gitant's_causeway`,
+    path: `images/gitant's_causeway.jpg`,
     description: `Photo of the Giant's Causeway in Northern Ireland.`,
     title: `Giant's Causeway`,
     likes: 0,
