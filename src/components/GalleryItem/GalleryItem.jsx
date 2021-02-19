@@ -19,7 +19,7 @@ function GalleryItem() {
       </div>
       <div className="love=counter">
         <p>
-          <stromn>??</stromn> people love this!
+          <strong>??</strong> people love this!
         </p>
       </div>
     </div>
