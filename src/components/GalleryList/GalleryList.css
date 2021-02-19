@@ -1,0 +1,17 @@
+.gallery-item {
+  display: inline-block;
+  height: 175px;
+  width: 150px;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.loveIt-button {
+  margin: 10px;
+}
+
+.love-counter {
+  margin: 10px;
+}

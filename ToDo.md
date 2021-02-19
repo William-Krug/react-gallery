@@ -3,14 +3,14 @@
 ## Base Mode:
 
 - [x] check out server side GET and PUT
-- [ ] Create array on Server
-  - [ ] pass in objects??
-- [ ] add images to public/images folder (~6)
-- [ ] modify `server/module/data.js` to include:
-  - [ ] `id`
-  - [ ] `title`
-  - [ ] `description`
-  - [ ] `path`
+- [x] Create array on Server
+  - [x] pass in objects??
+- [x] add images to public/images folder (~6)
+- [x] modify `server/module/data.js` to include:
+  - [x] `id`
+  - [x] `title`
+  - [x] `description`
+  - [x] `path`
 - [ ] `GalleryList.jsx` static markup
   - [ ] css for `GalleryList`
   - [ ] `<div>` container
