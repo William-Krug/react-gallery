@@ -1,14 +1,30 @@
+import './GalleryItem.css';
+
+/**
+ * Function creates individual items to be used in the GalleryList component.
+ *
+ * Returns jsx to be displayed.
+ *
+ * Incoming props looks like:
+ * {
+ *  id: 1,
+ *  title: "Sir William",
+ *  description: "Photo of two knights fighting with hand-and-a-half broadswords",
+ *  path: "images/emma.jpg",
+ *  likes: 77,
+ * }
+ * @param {galleryItem} param0
+ */
 function GalleryItem({ galleryItem }) {
   console.log('*** in GalleryItem() Component ***');
-  console.log('galleryItem:', galleryItem);
   return (
     <div className="gallery-item">
       <div>
         <img
-          src="images/emma.jpg"
-          alt="Photo of two knights fighting with hand-and-a-half broadswords."
-          width="150"
-          height="150"
+          src={galleryItem.path}
+          alt={galleryItem.description}
+          width="200"
+          height="200"
         />
       </div>
       <div>
