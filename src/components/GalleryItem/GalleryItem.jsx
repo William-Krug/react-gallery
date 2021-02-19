@@ -15,7 +15,7 @@ import './GalleryItem.css';
  * }
  * @param {galleryItem} param0
  */
-function GalleryItem({ galleryItem }) {
+function GalleryItem({ galleryItem, loveIt }) {
   console.log('*** in GalleryItem() Component ***');
   return (
     <div className="gallery-item">
@@ -30,14 +30,14 @@ function GalleryItem({ galleryItem }) {
       <div>
         <button
           className="loveIt-button"
-          onClick={() => console.log('Like Button Clicked')}
+          onClick={() => loveIt(galleryItem.id)}
         >
           Love It!
         </button>
       </div>
       <div className="love=counter">
         <p>
-          <strong>??</strong> people love this!
+          <strong>{galleryItem.likes}</strong> people love this!
         </p>
       </div>
     </div>
