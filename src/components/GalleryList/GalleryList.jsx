@@ -11,13 +11,19 @@ import GalleryItem from '../GalleryItem/GalleryItem';
  *
  * @param {galleryList} param0
  */
-function GalleryList({ galleryList }) {
+function GalleryList({ galleryList, loveIt }) {
   console.log('*** in GalleryList() Component ***');
   console.log('galleryList:', galleryList);
   return (
     <div>
       {galleryList.map((galleryItem) => {
-        return <GalleryItem key={galleryItem.id} galleryItem={galleryItem} />;
+        return (
+          <GalleryItem
+            key={galleryItem.id}
+            galleryItem={galleryItem}
+            loveIt={loveIt}
+          />
+        );
       })}
     </div>
   );

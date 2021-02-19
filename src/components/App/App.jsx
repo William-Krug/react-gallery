@@ -36,14 +36,17 @@ function App() {
       });
   };
 
-  console.log();
+  const loveIt = (loveItID) => {
+    console.log('*** in loveIt ***');
+    console.log('loveItID:', loveItID);
+  };
 
   return (
     <div className="App">
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      <GalleryList galleryList={galleryList} />
+      <GalleryList galleryList={galleryList} loveIt={loveIt} />
     </div>
   );
 }
