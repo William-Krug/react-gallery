@@ -3,7 +3,7 @@ const galleryItems = [
     id: 1,
     path: 'images/emma.jpg',
     description:
-      'Photo of Sir William and Sir Edward fighting with hand-and-a-half broadswords',
+      'Photo of two knights fighting with hand-and-a-half broadswords.',
     title: 'Sir William',
     likes: 0,
   },
@@ -30,7 +30,7 @@ const galleryItems = [
   },
   {
     id: 5,
-    path: 'images/amger.jpg',
+    path: 'images/amber.jpg',
     description: 'Photo of a stunning wife on our wedding day.',
     title: 'New Bride',
     likes: 0,
