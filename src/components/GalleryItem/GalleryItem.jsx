@@ -1,4 +1,6 @@
-function GalleryItem() {
+function GalleryItem({ galleryItem }) {
+  console.log('*** in GalleryItem() Component ***');
+  console.log('galleryItem:', galleryItem);
   return (
     <div className="gallery-item">
       <div>

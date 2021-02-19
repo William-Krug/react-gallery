@@ -19,7 +19,7 @@ const galleryItems = [
     id: 3,
     title: `Giant's Causeway`,
     description: `Photo of the Giant's Causeway in Northern Ireland.`,
-    path: `images/gitant's_causeway.jpg`,
+    path: `images/giant's_causeway.jpg`,
     likes: 0,
   },
   {
@@ -32,7 +32,7 @@ const galleryItems = [
   {
     id: 5,
     title: 'New Bride',
-    description: 'Photo of a stunning wife on our wedding day.',
+    description: 'Photo of my stunning wife on our wedding day.',
     path: 'images/amber.jpg',
     likes: 0,
   },
