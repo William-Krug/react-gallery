@@ -2,7 +2,7 @@
 
 ## Base Mode:
 
-- [ ] check out server side GET and PUT
+- [x] check out server side GET and PUT
 - [ ] Create array on Server
   - [ ] pass in objects??
 - [ ] add images to public/images folder (~6)
