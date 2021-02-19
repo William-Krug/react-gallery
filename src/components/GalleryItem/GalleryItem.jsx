@@ -3,7 +3,7 @@ import './GalleryItem.css';
 /**
  * Function creates individual items to be used in the GalleryList component.
  *
- * Returns jsx to be displayed.
+ * Returns jsx to be displayed by the GalleryList.jsx component
  *
  * Incoming props looks like:
  * {
