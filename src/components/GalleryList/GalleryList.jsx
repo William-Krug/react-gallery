@@ -15,11 +15,14 @@ function GalleryList() {
             />
           </div>
           <div>
-            <button onClick={() => console.log('Like Button Clicked')}>
+            <button
+              className="loveIt-button"
+              onClick={() => console.log('Like Button Clicked')}
+            >
               Love It!
             </button>
           </div>
-          <div>
+          <div className="love-counter">
             <p>
               <strong>??</strong> people love this!
             </p>
@@ -36,11 +39,14 @@ function GalleryList() {
             />
           </div>
           <div>
-            <button onClick={() => console.log('Like Button Clicked')}>
+            <button
+              className="loveIt-button"
+              onClick={() => console.log('Like Button Clicked')}
+            >
               Love It!
             </button>
           </div>
-          <div>
+          <div className="love-counter">
             <p>
               <strong>??</strong> people love this!
             </p>
@@ -57,11 +63,14 @@ function GalleryList() {
             />
           </div>
           <div>
-            <button onClick={() => console.log('Like Button Clicked')}>
+            <button
+              className="loveIt-button"
+              onClick={() => console.log('Like Button Clicked')}
+            >
               Love It!
             </button>
           </div>
-          <div>
+          <div className="love-counter">
             <p>
               <strong>??</strong> people love this!
             </p>
@@ -78,11 +87,14 @@ function GalleryList() {
             />
           </div>
           <div>
-            <button onClick={() => console.log('Like Button Clicked')}>
+            <button
+              className="loveIt-button"
+              onClick={() => console.log('Like Button Clicked')}
+            >
               Love It!
             </button>
           </div>
-          <div>
+          <div className="love-counter">
             <p>
               <strong>??</strong> people love this!
             </p>
@@ -99,11 +111,14 @@ function GalleryList() {
             />
           </div>
           <div>
-            <button onClick={() => console.log('Like Button Clicked')}>
+            <button
+              className="loveIt-button"
+              onClick={() => console.log('Like Button Clicked')}
+            >
               Love It!
             </button>
           </div>
-          <div>
+          <div className="love-counter">
             <p>
               <strong>??</strong> people love this!
             </p>
@@ -120,11 +135,14 @@ function GalleryList() {
             />
           </div>
           <div>
-            <button onClick={() => console.log('Like Button Clicked')}>
+            <button
+              className="loveIt-button"
+              onClick={() => console.log('Like Button Clicked')}
+            >
               Love It!
             </button>
           </div>
-          <div>
+          <div className="love-counter">
             <p>
               <strong>??</strong> people love this!
             </p>
