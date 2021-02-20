@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './GalleryItem.css';
 
 /**
@@ -17,15 +18,31 @@ import './GalleryItem.css';
  */
 function GalleryItem({ galleryItem, loveIt }) {
   console.log('*** in GalleryItem() Component ***');
-  return (
-    <div className="gallery-item">
-      <div>
+
+  const [clickCount, setClickCount] = useState(0);
+
+  const pictureSwap = () => {
+    if (clickCount % 2 === 0) {
+      return (
         <img
           src={galleryItem.path}
           alt={galleryItem.description}
           width="200"
           height="200"
         />
+      );
+    } else {
+      return <p className="photo-description">{galleryItem.description}</p>;
+    }
+  };
+
+  return (
+    <div className="gallery-item">
+      <div
+        className="picture-container rock-n-roll"
+        onClick={() => setClickCount(clickCount + 1)}
+      >
+        {pictureSwap()}
       </div>
       <div>
         <button
@@ -35,7 +52,7 @@ function GalleryItem({ galleryItem, loveIt }) {
           Love It!
         </button>
       </div>
-      <div className="love=counter">
+      <div className="love=counter rock-n-roll">
         <p>
           <strong>{galleryItem.likes}</strong> people love this!
         </p>
