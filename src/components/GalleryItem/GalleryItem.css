@@ -19,17 +19,14 @@
   vertical-align: middle;
 }
 
-.photo-description {
-  /* display: inline-block;
-  vertical-align: middle; */
-  /* width: 70%;
-  margin: auto; */
-}
-
 .loveIt-button {
   margin: 20px 0 10px 0;
 }
 
 .love-counter {
   margin: 10px;
+}
+
+.rock-n-roll {
+  font-family: 'RocknRoll One', sans-serif;
 }

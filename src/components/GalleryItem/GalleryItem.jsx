@@ -39,7 +39,7 @@ function GalleryItem({ galleryItem, loveIt }) {
   return (
     <div className="gallery-item">
       <div
-        className="picture-container"
+        className="picture-container rock-n-roll"
         onClick={() => setClickCount(clickCount + 1)}
       >
         {pictureSwap()}
@@ -52,7 +52,7 @@ function GalleryItem({ galleryItem, loveIt }) {
           Love It!
         </button>
       </div>
-      <div className="love=counter">
+      <div className="love=counter rock-n-roll">
         <p>
           <strong>{galleryItem.likes}</strong> people love this!
         </p>
