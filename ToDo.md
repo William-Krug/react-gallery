@@ -22,7 +22,7 @@
 - [x] verify button recognized by `App.jsx`
   - [x] axios `PUT` to `/gallery/like/:id`
 - [x] connect button to server for voting
-- [ ] conditional rendering for picture/description
+- [x] conditional rendering for picture/description
 - [x] axios `GET` from `/gallery` and store it in `App.jsx`
 - [x] `GalleryList` gets data from `App`
 - [x] display likes

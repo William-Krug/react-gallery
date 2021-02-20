@@ -10,6 +10,20 @@
 .picture-container {
   height: 200px;
   width: 200px;
+  line-height: 200px;
+}
+
+.picture-container p {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.photo-description {
+  /* display: inline-block;
+  vertical-align: middle; */
+  /* width: 70%;
+  margin: auto; */
 }
 
 .loveIt-button {

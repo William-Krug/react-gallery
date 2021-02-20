@@ -32,7 +32,7 @@ function GalleryItem({ galleryItem, loveIt }) {
         />
       );
     } else {
-      return <p>{galleryItem.description}</p>;
+      return <p className="photo-description">{galleryItem.description}</p>;
     }
   };
 
@@ -43,12 +43,6 @@ function GalleryItem({ galleryItem, loveIt }) {
         onClick={() => setClickCount(clickCount + 1)}
       >
         {pictureSwap()}
-        {/* <img
-          src={galleryItem.path}
-          alt={galleryItem.description}
-          width="200"
-          height="200"
-        /> */}
       </div>
       <div>
         <button
