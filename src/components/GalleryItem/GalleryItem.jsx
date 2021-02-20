@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './GalleryItem.css';
 
 /**
@@ -18,12 +19,10 @@ import './GalleryItem.css';
 function GalleryItem({ galleryItem, loveIt }) {
   console.log('*** in GalleryItem() Component ***');
 
-  let clickCounter = 1;
+  const [clickCount, setClickCount] = useState(0);
 
-  const pictureSwap = (event) => {
-    event.preventDefault();
-    if (clickCounter % 2 === 0) {
-      clickCounter++;
+  const pictureSwap = () => {
+    if (clickCount % 2 === 0) {
       return (
         <img
           src={galleryItem.path}
@@ -33,7 +32,6 @@ function GalleryItem({ galleryItem, loveIt }) {
         />
       );
     } else {
-      clickCounter++;
       return <p>{galleryItem.description}</p>;
     }
   };
@@ -41,21 +39,16 @@ function GalleryItem({ galleryItem, loveIt }) {
   return (
     <div className="gallery-item">
       <div
-      // onClick={() => {
-      //   console.log('image <div> clicked');
-      //   pictureSwap();
-      // }}
+        className="picture-container"
+        onClick={() => setClickCount(clickCount + 1)}
       >
-        <img
+        {pictureSwap()}
+        {/* <img
           src={galleryItem.path}
           alt={galleryItem.description}
           width="200"
           height="200"
-          onClick={() => {
-            console.log('image clicked');
-            pictureSwap(event);
-          }}
-        />
+        /> */}
       </div>
       <div>
         <button

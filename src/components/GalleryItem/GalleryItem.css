@@ -7,6 +7,11 @@
   text-align: center;
 }
 
+.picture-container {
+  height: 200px;
+  width: 200px;
+}
+
 .loveIt-button {
   margin: 20px 0 10px 0;
 }
