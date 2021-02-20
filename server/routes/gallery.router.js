@@ -6,7 +6,18 @@ const pool = require('../modules/pool');
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
 // PUT Route
+/**
+ * PUT Route for /gallery/like/:id
+ *
+ * Updates the called id's like count by 1
+ *
+ * Request body looks like:
+ * {
+ *  likes: ++
+ * }
+ */
 router.put('/like/:id', (req, res) => {
+  /* Base Mode PUT route
   console.log(req.params);
   const galleryId = req.params.id;
   for (const galleryItem of galleryItems) {
@@ -15,11 +26,38 @@ router.put('/like/:id', (req, res) => {
     }
   }
   res.sendStatus(200);
+  */
+  console.log('*** in PUT /gallery/like/:id ***');
+
+  const likesID = req.params.id;
+  const likes = req.body.like;
+
+  let sqlText = '';
+
+  if (like === '++') {
+    sqlScript = `
+      UPDATE "gallery"
+      SET "likes" = 'likes' + 1
+      WHERE "id" = $1;
+    `;
+  } else {
+    res.sendStatus(400);
+    return;
+  }
+
+  pool
+    .query(sqlScript, [likesID])
+    .then((dbResponse) => {
+      res.sendStatus(200);
+    })
+    .catch((error) => {
+      console.log(`*** Error making database PUT query ${sqlText} ***`);
+      res.sendStatus(500);
+    });
 }); // END PUT Route
 
-// GET Route
 /**
- * GET Rout for /gallery
+ * GET Route for /gallery
  *
  * Retrieves shopping list
  */
@@ -39,7 +77,7 @@ router.get('/', (req, res) => {
       res.send(dbResponse.rows);
     })
     .catch((error) => {
-      console.log(`ERROR making db query ${sqlText}:`, error);
+      console.log(`*** Error making db query ${sqlText} ***`, error);
       res.sendStatus(500);
     });
 }); // END GET Route
