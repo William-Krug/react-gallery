@@ -4,7 +4,6 @@ const galleryItems = [
     title: 'Sir William',
     description:
       'Photo of two knights fighting with hand-and-a-half broadswords.',
-    title: 'Sir William',
     path: 'images/emma.jpg',
     likes: 0,
   },
