@@ -17,30 +17,30 @@ VALUES
 	(
     'Sir William',
     'Two knights fighting with hand-and-a-half broadswords.',
-    'https://github.com/William-Krug/react-gallery/blob/master/public/images/emma.jpg'
+    'images/emma.jpg'
   ),
 	(
     'Skydiving',
     'Photo of tandem skydivers at 7,000 feet.',
-    'https://github.com/William-Krug/react-gallery/blob/master/public/images/skydiving.JPG'
+    'images/skydiving.jpg'
   ),
 	(
     'Giant''s Causeway',
     'The Giant''s Causeway in Northern Ireland.',
-    'https://github.com/William-Krug/react-gallery/blob/master/public/images/giant''s_causeway.JPG'
+    'images/giant''s_causeway.jpg'
   ),
 	(
     'Digital Art',
     'A color burst digitally rendered.',
-    'https://github.com/William-Krug/react-gallery/blob/master/public/images/digital.jpeg'
+    'images/digital.jpeg'
   ),
 	(
     'New Bride',
     'My stunning wife on our wedding day.',
-    'https://github.com/William-Krug/react-gallery/blob/master/public/images/amber.jpg'
+    'images/amber.jpg'
   ),
 	(
     'Munchkins',
     'New big sister loving her little brother.',
-    'https://github.com/William-Krug/react-gallery/blob/master/public/images/munchkins.jpeg'
-  );
+    'images/munchkins.jpeg'
+  )
