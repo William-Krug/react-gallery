@@ -19,14 +19,14 @@
   - [x] `<p>`
 - [x] `GalleryItem.jsx`
   - [x] css for `GalleryItem`
-- [ ] verify button recognized by `App.jsx`
-  - [ ] axios `PUT` to `/gallery/like/:id`
-- [ ] connect button to server for voting
+- [x] verify button recognized by `App.jsx`
+  - [x] axios `PUT` to `/gallery/like/:id`
+- [x] connect button to server for voting
 - [ ] conditional rendering for picture/description
-- [ ] axios `GET` from `/gallery` and store it in `App.jsx`
-- [ ] `GalleryList` gets data from `App`
-- [ ] display likes
-- [ ] auto refresh after button click
+- [x] axios `GET` from `/gallery` and store it in `App.jsx`
+- [x] `GalleryList` gets data from `App`
+- [x] display likes
+- [x] auto refresh after button click
 - [ ] create README.md
 
 ## Stretch Goals:

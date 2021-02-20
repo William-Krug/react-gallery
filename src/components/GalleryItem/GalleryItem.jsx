@@ -17,14 +17,44 @@ import './GalleryItem.css';
  */
 function GalleryItem({ galleryItem, loveIt }) {
   console.log('*** in GalleryItem() Component ***');
-  return (
-    <div className="gallery-item">
-      <div>
+
+  let clickCounter = 1;
+
+  const pictureSwap = (event) => {
+    event.preventDefault();
+    if (clickCounter % 2 === 0) {
+      clickCounter++;
+      return (
         <img
           src={galleryItem.path}
           alt={galleryItem.description}
           width="200"
           height="200"
+        />
+      );
+    } else {
+      clickCounter++;
+      return <p>{galleryItem.description}</p>;
+    }
+  };
+
+  return (
+    <div className="gallery-item">
+      <div
+      // onClick={() => {
+      //   console.log('image <div> clicked');
+      //   pictureSwap();
+      // }}
+      >
+        <img
+          src={galleryItem.path}
+          alt={galleryItem.description}
+          width="200"
+          height="200"
+          onClick={() => {
+            console.log('image clicked');
+            pictureSwap(event);
+          }}
         />
       </div>
       <div>
