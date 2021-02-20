@@ -31,7 +31,7 @@ function App() {
         setGalleryList(response.data);
       })
       .catch((error) => {
-        alert('ERROR with request.  Please try again later.');
+        alert('Error with request.  Please try again later.');
         console.log(`GET '/gallery' error:`, error);
       });
   };
@@ -41,13 +41,13 @@ function App() {
     console.log('loveItID:', loveItID);
 
     axios
-      .put(`/gallery/like/${loveItID}`)
+      .put(`/gallery/like/${loveItID}`, { likes: '++' })
       .then((response) => {
         console.log('PUT response:', response);
         fetchGalleryList();
       })
       .catch((error) => {
-        alert('ERROR with request.  Please try again later.');
+        alert('Error with request.  Please try again later.');
         console.log(`PUT '/gallery/like/${loveItID}' error:`, error);
       });
   };

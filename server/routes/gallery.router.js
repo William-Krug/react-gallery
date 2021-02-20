@@ -30,14 +30,14 @@ router.put('/like/:id', (req, res) => {
   console.log('*** in PUT /gallery/like/:id ***');
 
   const likesID = req.params.id;
-  const likes = req.body.like;
+  const likes = req.body.likes;
 
   let sqlText = '';
 
-  if (like === '++') {
+  if (likes === '++') {
     sqlScript = `
       UPDATE "gallery"
-      SET "likes" = 'likes' + 1
+      SET "likes" = "likes" + 1
       WHERE "id" = $1;
     `;
   } else {
