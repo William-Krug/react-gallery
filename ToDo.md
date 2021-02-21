@@ -38,6 +38,6 @@
   - [x] `POST` a new gallery item
   - [x] use absolute URL for images on the client side
   - [x] server side route for posting an image
-- [ ] delete single gallery itme
+- [x] delete single gallery itme
 - [ ] styling with Material-UI (https://material-ui.com/)
 - [ ] Implement uppy for image upload
