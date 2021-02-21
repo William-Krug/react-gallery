@@ -65,6 +65,7 @@ router.get('/', (req, res) => {
   /* Base Mode GET route
   res.send(galleryItems);
   */
+  console.log('*** in GET /gallery ***');
 
   const sqlText = `
     SELECT * FROM "gallery"
@@ -81,5 +82,43 @@ router.get('/', (req, res) => {
       res.sendStatus(500);
     });
 }); // END GET Route
+
+/**
+ * POST Route for /gallery
+ *
+ * Adds new item to the database
+ *
+ * Request body looks like:
+ * {
+ *  title: 1973 Pontiac GTO
+ *  description: Dream Car
+ *  url: https://www...
+ * }
+ */
+router.post('/', (req, res) => {
+  console.log('*** in POST /gallery ***');
+  const sqlText = `
+    INSERT INTO "gallery"
+      ("title", "description", "path")
+    VALUES
+      ($1, $2, $3)
+  `;
+  const queryArguments = [
+    req.body.title, // $1
+    req.body.description, // $2
+    req.body.path, // $3
+  ];
+
+  pool
+    .query(sqlText, queryArguments)
+    .then((dbResponse) => {
+      console.log('Item added to the database');
+      res.sendStatus(201);
+    })
+    .catch((error) => {
+      console.log(`*** Error making db query ${sqlText} ***`, error);
+      res.sendStatus(500);
+    });
+}); // END POST Route
 
 module.exports = router;
