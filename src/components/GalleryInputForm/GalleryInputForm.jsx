@@ -9,14 +9,14 @@ function GalleryInputForm({
   setNewPath,
 }) {
   return (
-    <div>
+    <div className="input-form">
       <h2>Add a New Gallery Item</h2>
       <form
         onSubmit={() => {
           console.log('Form Submit');
         }}
       >
-        <div>
+        <div className="input-row">
           <label>
             <strong>Title</strong>
           </label>
@@ -27,7 +27,7 @@ function GalleryInputForm({
             onChange={(event) => setNewTitle(event.target.value)}
           />
         </div>
-        <div>
+        <div className="input-row">
           <label>
             <strong>Description</strong>
           </label>
@@ -38,7 +38,7 @@ function GalleryInputForm({
             onChange={(event) => setNewDescription(event.target.value)}
           />
         </div>
-        <div>
+        <div className="input-row">
           <label>
             <strong>URL</strong>
           </label>
