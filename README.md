@@ -1,15 +1,3 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
-
-## Description
-
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
-
-(View Raw will give you the markdown that you can copy to your repos!)
-
 ![MIT LICENSE](https://img.shields.io/github/license/William-Krug/react-gallery.svg?style=flat-square)
 ![REPO SIZE](https://img.shields.io/github/repo-size/William-Krug/react-gallery.svg?style=flat-square)
 ![TOP_LANGUAGE](https://img.shields.io/github/languages/top/William-Krug/react-gallery.svg?style=flat-square)
@@ -25,8 +13,8 @@ React Gallery is a picture gallery of images that mean something to the user. Af
 
 ## Screen Shot
 
-[Initial Page Load]('images/base_mode.png')
-[Gallery in Use]('images/loves_descriptions.png')
+![Initial Page Load](https://github.com/William-Krug/react-gallery/blob/master/public/images/base_mode.png)
+![Gallery in Use](https://github.com/William-Krug/react-gallery/blob/master/public/images/loves_descriptions.png)
 
 ### Prerequisites
 
