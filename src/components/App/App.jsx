@@ -101,6 +101,28 @@ function App() {
     setNewPath('');
   };
 
+  /**
+   * DELETE route for /gallery/:id
+   *
+   * Function removes the passed id from the database
+   *
+   * @param {deleteID} deleteID
+   */
+  const removeGalleryItem = (deleteID) => {
+    console.log('*** in removeGalleryItem() ***');
+
+    axios
+      .delete(`/gallery/${deleteID}`)
+      .then((response) => {
+        console.log('DELETE response:', response);
+        fetchGalleryList();
+      })
+      .catch((error) => {
+        alert('Error with request.  Please try again later.');
+        console.log('DELETE /gallery/:id error:', error);
+      });
+  };
+
   return (
     <div className="App">
       <header className="App-header">
