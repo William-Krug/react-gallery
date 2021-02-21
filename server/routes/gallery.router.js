@@ -32,6 +32,7 @@ router.put('/like/:id', (req, res) => {
   const likesID = req.params.id;
   const likes = req.body.likes;
 
+  // Sanitize inputs to database
   let sqlText = '';
 
   if (likes === '++') {
@@ -48,6 +49,7 @@ router.put('/like/:id', (req, res) => {
   pool
     .query(sqlScript, [likesID])
     .then((dbResponse) => {
+      console.log('Liks updated');
       res.sendStatus(200);
     })
     .catch((error) => {
@@ -75,6 +77,7 @@ router.get('/', (req, res) => {
   pool
     .query(sqlText)
     .then((dbResponse) => {
+      console.log('Gallery Items Obtained');
       res.send(dbResponse.rows);
     })
     .catch((error) => {
@@ -97,11 +100,13 @@ router.get('/', (req, res) => {
  */
 router.post('/', (req, res) => {
   console.log('*** in POST /gallery ***');
+
+  // Sanitize inputs to database
   const sqlText = `
     INSERT INTO "gallery"
       ("title", "description", "path")
     VALUES
-      ($1, $2, $3)
+      ($1, $2, $3);
   `;
   const queryArguments = [
     req.body.title, // $1
@@ -120,5 +125,33 @@ router.post('/', (req, res) => {
       res.sendStatus(500);
     });
 }); // END POST Route
+
+/**
+ * DELETE Route for /gallery/:id
+ *
+ * Deletes a single record (Gallery Item) from the database
+ */
+router.delete('/:id', (req, res) => {
+  console.log('*** in DELETE /gallery/:id ***');
+
+  const deleteID = req.params.id;
+
+  // Sanitize inputs to database
+  const sqlText = `
+    DELETE from "gallery"
+    WHERE "id" = $1;
+  `;
+
+  pool
+    .query(sqlText, [deleteID])
+    .then((dbResponse) => {
+      console.log('Gallery Item Deleted');
+      res.sendStatus(200);
+    })
+    .catch((error) => {
+      console.log(`*** Error making db query ${sqlText} ***`, error);
+      res.sendStatus(500);
+    });
+}); // END DELETE Route
 
 module.exports = router;
