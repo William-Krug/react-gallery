@@ -13,7 +13,6 @@ import GalleryItem from '../GalleryItem/GalleryItem';
  */
 function GalleryList({ galleryList, loveIt }) {
   console.log('*** in GalleryList() Component ***');
-  console.log('galleryList:', galleryList);
   return (
     <div>
       {galleryList.map((galleryItem) => {

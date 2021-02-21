@@ -8,6 +8,7 @@ function GalleryInputForm({
   newPath,
   setNewPath,
 }) {
+  console.log('*** in GalleryInputForm() Component ***');
   return (
     <div className="input-form">
       <h2>Add a New Gallery Item</h2>
