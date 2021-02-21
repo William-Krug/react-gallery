@@ -11,6 +11,8 @@
   height: 200px;
   width: 200px;
   line-height: 200px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .picture-container p {
@@ -19,8 +21,11 @@
   vertical-align: middle;
 }
 
-.loveIt-button {
-  margin: 20px 0 10px 0;
+.button-row {
+  text-align: center;
+}
+button {
+  margin: 20px 10px 10px 10px;
 }
 
 .love-counter {

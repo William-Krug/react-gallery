@@ -16,8 +16,9 @@ import './GalleryItem.css';
  * }
  * @param {galleryItem} param0
  * @param {loveIt} param1
+ * @param {removeGalleryItem} param2
  */
-function GalleryItem({ galleryItem, loveIt }) {
+function GalleryItem({ galleryItem, loveIt, removeGalleryItem }) {
   console.log('*** in GalleryItem() Component ***');
 
   const [clickCount, setClickCount] = useState(0);
@@ -45,12 +46,18 @@ function GalleryItem({ galleryItem, loveIt }) {
       >
         {pictureSwap()}
       </div>
-      <div>
+      <div className="button-row">
         <button
           className="loveIt-button"
           onClick={() => loveIt(galleryItem.id)}
         >
           Love It!
+        </button>
+        <button
+          className="remove-button"
+          onClick={() => removeGalleryItem(galleryItem.id)}
+        >
+          Remove
         </button>
       </div>
       <div className="love=counter rock-n-roll">
