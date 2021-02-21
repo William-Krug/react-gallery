@@ -7,16 +7,13 @@ function GalleryInputForm({
   setNewDescription,
   newPath,
   setNewPath,
+  addNewItem,
 }) {
   console.log('*** in GalleryInputForm() Component ***');
   return (
     <div className="input-form">
       <h2>Add a New Gallery Item</h2>
-      <form
-        onSubmit={() => {
-          console.log('Form Submit');
-        }}
-      >
+      <form onSubmit={addNewItem}>
         <div className="input-row">
           <label>
             <strong>Title</strong>
@@ -26,6 +23,7 @@ function GalleryInputForm({
             placeholder="1973 Pontiac GTO"
             value={newTitle}
             onChange={(event) => setNewTitle(event.target.value)}
+            required
           />
         </div>
         <div className="input-row">
@@ -37,6 +35,7 @@ function GalleryInputForm({
             placeholder="Dream Car"
             value={newDescription}
             onChange={(event) => setNewDescription(event.target.value)}
+            required
           />
         </div>
         <div className="input-row">
@@ -48,6 +47,7 @@ function GalleryInputForm({
             placeholder="https://www..."
             value={newPath}
             onChange={(event) => setNewPath(event.target.value)}
+            required
           />
           <button type="submit">Add Item</button>
         </div>

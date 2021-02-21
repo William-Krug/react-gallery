@@ -63,9 +63,18 @@ function App() {
       });
   };
 
+  /**
+   * Function creates a new Gallery Item object and
+   * stores it in the database.
+   *
+   * @param {event} event
+   */
   const addNewItem = (event) => {
     event.preventDefault();
     console.log('*** in addNewItem() ***');
+    console.log('newTitle:', newTitle);
+    console.log('newDescription:', newDescription);
+    console.log('newPath:', newPath);
 
     axios
       .post('/gallery', {
@@ -84,6 +93,9 @@ function App() {
       });
   };
 
+  /**
+   * Function clears input fields
+   */
   const clearInputs = () => {
     setNewTitle('');
     setNewDescription('');
@@ -102,6 +114,7 @@ function App() {
         setNewDescription={setNewDescription}
         newPath={newPath}
         setNewPath={setNewPath}
+        addNewItem={addNewItem}
       />
       <GalleryList galleryList={galleryList} loveIt={loveIt} />
     </div>
