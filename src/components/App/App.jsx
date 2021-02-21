@@ -5,10 +5,14 @@ import axios from 'axios';
 /* Import Components */
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
+import GalleryInputForm from '../GalleryInputForm/GalleryInputForm';
 
 function App() {
   // Declare and initialize variables
   const [galleryList, setGalleryList] = useState([]);
+  const [newTitle, setNewTitle] = useState('');
+  const [newDescription, setNewDescription] = useState('');
+  const [newPath, setNewPath] = useState('');
 
   // auto-render table info on DOM:
   useEffect(() => {
@@ -57,6 +61,14 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
+      <GalleryInputForm
+        newTitle={newTitle}
+        setNewTitle={setNewTitle}
+        newDescription={newDescription}
+        setNewDescription={setNewDescription}
+        newPath={newPath}
+        setNewPath={setNewPath}
+      />
       <GalleryList galleryList={galleryList} loveIt={loveIt} />
     </div>
   );
