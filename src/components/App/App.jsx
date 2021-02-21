@@ -5,10 +5,14 @@ import axios from 'axios';
 /* Import Components */
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
+import GalleryInputForm from '../GalleryInputForm/GalleryInputForm';
 
 function App() {
   // Declare and initialize variables
   const [galleryList, setGalleryList] = useState([]);
+  const [newTitle, setNewTitle] = useState('');
+  const [newDescription, setNewDescription] = useState('');
+  const [newPath, setNewPath] = useState('');
 
   // auto-render table info on DOM:
   useEffect(() => {
@@ -36,6 +40,13 @@ function App() {
       });
   };
 
+  /**
+   * PUT route for /gallery/like/:id
+   *
+   * Function updates the passed id's like count by 1
+   *
+   * @param {loveItID} loveItID
+   */
   const loveIt = (loveItID) => {
     console.log('*** in loveIt ***');
     console.log('loveItID:', loveItID);
@@ -52,11 +63,58 @@ function App() {
       });
   };
 
+  /**
+   * Function creates a new Gallery Item object and
+   * stores it in the database.
+   *
+   * @param {event} event
+   */
+  const addNewItem = (event) => {
+    // Keep DOM from refreshing on submit
+    event.preventDefault();
+    console.log('*** in addNewItem() ***');
+
+    axios
+      .post('/gallery', {
+        title: newTitle,
+        description: newDescription,
+        path: newPath,
+      })
+      .then((response) => {
+        console.log('POST response:', response);
+        fetchGalleryList();
+        clearInputs();
+      })
+      .catch((error) => {
+        alert('Error with request.  Please try again later.');
+        console.log('POST /gallery error:', error);
+      });
+  };
+
+  /**
+   * Function clears input fields
+   */
+  const clearInputs = () => {
+    // Set values to empty strings
+    setNewTitle('');
+    setNewDescription('');
+    setNewPath('');
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
+      <GalleryInputForm
+        newTitle={newTitle}
+        setNewTitle={setNewTitle}
+        newDescription={newDescription}
+        setNewDescription={setNewDescription}
+        newPath={newPath}
+        setNewPath={setNewPath}
+        addNewItem={addNewItem}
+      />
       <GalleryList galleryList={galleryList} loveIt={loveIt} />
     </div>
   );

@@ -10,10 +10,10 @@ import GalleryItem from '../GalleryItem/GalleryItem';
  * [{id: title: description: path: likes:}, {}, {}...]
  *
  * @param {galleryList} param0
+ * @param {loveIt} param1
  */
 function GalleryList({ galleryList, loveIt }) {
   console.log('*** in GalleryList() Component ***');
-  console.log('galleryList:', galleryList);
   return (
     <div>
       {galleryList.map((galleryItem) => {

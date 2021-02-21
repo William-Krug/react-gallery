@@ -31,13 +31,13 @@
 
 ## Stretch Goals:
 
-- [ ] move data in db
-  - [ ] db name: `react_gallery
-  - [ ] include `database.sql` file
-- [ ] form
-  - [ ] `POST` a new gallery item
-  - [ ] use absolute URL for images on the client side
-  - [ ] server side route for posting an image
+- [x] move data in db
+  - [x] db name: `react_gallery`
+  - [x] include `database.sql` file
+- [x] form
+  - [x] `POST` a new gallery item
+  - [x] use absolute URL for images on the client side
+  - [x] server side route for posting an image
 - [ ] delete single gallery itme
 - [ ] styling with Material-UI (https://material-ui.com/)
 - [ ] Implement uppy for image upload

@@ -15,6 +15,7 @@ import './GalleryItem.css';
  *  likes: 77,
  * }
  * @param {galleryItem} param0
+ * @param {loveIt} param1
  */
 function GalleryItem({ galleryItem, loveIt }) {
   console.log('*** in GalleryItem() Component ***');
