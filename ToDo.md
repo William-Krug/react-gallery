@@ -27,7 +27,7 @@
 - [x] `GalleryList` gets data from `App`
 - [x] display likes
 - [x] auto refresh after button click
-- [ ] create README.md
+- [x] create README.md
 
 ## Stretch Goals:
 

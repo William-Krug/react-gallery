@@ -21,9 +21,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 _Duration: 4 Day Sprint_
 
-Directly above this is how long it took you to develop the project. Your project description goes here. What problem did you solve? How did you solve it?
-
-To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com)
+React Gallery is a picture gallery of images that mean something to the user. After entering the required fields, a database entry of the gallery item is created and displayed on the DOM. User's can then click on the item image to see a description of the image and click again to go back to the picture. User's also have the option to _Love_ and _Remove_ an item from the gallery. The app is has a React based front end with an Express based server. PostgreSQL backend and Postico database round out the stack.
 
 ## Screen Shot
 
