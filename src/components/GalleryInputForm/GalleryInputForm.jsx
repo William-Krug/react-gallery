@@ -1,5 +1,17 @@
 import './GalleryInputForm.css';
 
+/**
+ * Function takes input values from the DOM to create
+ * a new Gallery Item that is stored in the database
+ *
+ * @param {newTitle} param0
+ * @param {setNewTitle} param1
+ * @param {newDescription} param2
+ * @param {setNewDescription} param3
+ * @param {newPath} param4
+ * @param {setNewPath} param5
+ * @param {addNewItem} param6
+ */
 function GalleryInputForm({
   newTitle,
   setNewTitle,

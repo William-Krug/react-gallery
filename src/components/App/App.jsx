@@ -70,11 +70,9 @@ function App() {
    * @param {event} event
    */
   const addNewItem = (event) => {
+    // Keep DOM from refreshing on submit
     event.preventDefault();
     console.log('*** in addNewItem() ***');
-    console.log('newTitle:', newTitle);
-    console.log('newDescription:', newDescription);
-    console.log('newPath:', newPath);
 
     axios
       .post('/gallery', {
@@ -97,6 +95,7 @@ function App() {
    * Function clears input fields
    */
   const clearInputs = () => {
+    // Set values to empty strings
     setNewTitle('');
     setNewDescription('');
     setNewPath('');
