@@ -11,8 +11,9 @@ import GalleryItem from '../GalleryItem/GalleryItem';
  *
  * @param {galleryList} param0
  * @param {loveIt} param1
+ * @param {removeGalleryItem} param2
  */
-function GalleryList({ galleryList, loveIt }) {
+function GalleryList({ galleryList, loveIt, removeGalleryItem }) {
   console.log('*** in GalleryList() Component ***');
   return (
     <div>
@@ -22,6 +23,7 @@ function GalleryList({ galleryList, loveIt }) {
             key={galleryItem.id}
             galleryItem={galleryItem}
             loveIt={loveIt}
+            removeGalleryItem={removeGalleryItem}
           />
         );
       })}

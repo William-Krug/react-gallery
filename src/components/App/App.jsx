@@ -137,7 +137,11 @@ function App() {
         setNewPath={setNewPath}
         addNewItem={addNewItem}
       />
-      <GalleryList galleryList={galleryList} loveIt={loveIt} />
+      <GalleryList
+        galleryList={galleryList}
+        loveIt={loveIt}
+        removeGalleryItem={removeGalleryItem}
+      />
     </div>
   );
 }
